@@ -58,10 +58,24 @@ public class AppTest
             System.out.println("Correct - " + i);
         }
     }
+    public void test3(Method m) throws InvocationTargetException, IllegalAccessException {
+        for (int i = 0; i < 20; i++)
+        {
+            Node node1 = new Node(new Point(i, 20 - i), 0, null, null);
+            Node node2 = new Node(new Point(i, 20 - i), 0, null, null);
+            Boolean o = (Boolean)m.invoke(null, node1, node2); //use null if the method is statit
+            assertTrue("Wrong not equals", o);
+            System.out.println("Correct - " + i);
+        }
+    }
+ 
     public void testApp() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
         Method m = Node.class.getDeclaredMethod("isEquals", Node.class, Node.class);
         m.setAccessible(true);
         test1(m);
         test2(m);
+        m = Node.class.getDeclaredMethod("isNotEquals", Node.class, Node.class);
+        m.setAccessible(true);
+	test3(m);
     }
 }
