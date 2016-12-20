@@ -31,6 +31,7 @@ public class Node {
         /**
          * Calculate this node's rectangular boundary.
          */
+
         private void setBoundary(Rectangle b) {
             b.setBounds(p.x - r, p.y - r, 2 * r, 2 * r);
         }
@@ -38,7 +39,13 @@ public class Node {
         /**
          * Draw this node.
          */
-        public void draw(Graphics g) {
+
+    static private boolean isEquals(Node node1, Node node2)
+    {
+        return (node1.p.x == node2.p.x && node1.p.y == node2.p.y);
+    }
+
+    public void draw(Graphics g) {
             g.setColor(this.color);
             if (this.kind == GraphPanel.Kind.Circular) {
                 g.fillOval(b.x, b.y, b.width, b.height);
