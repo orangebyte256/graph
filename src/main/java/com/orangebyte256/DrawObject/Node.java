@@ -45,6 +45,12 @@ public class Node {
         return (node1.p.x == node2.p.x && node1.p.y == node2.p.y);
     }
 
+    static private boolean isNotEquals(Node node1, Node node2)
+    {
+        return (node1.p.x != node2.p.x && node1.p.y == node2.p.y);
+    }
+
+
     public void draw(Graphics g) {
             g.setColor(this.color);
             if (this.kind == GraphPanel.Kind.Circular) {
