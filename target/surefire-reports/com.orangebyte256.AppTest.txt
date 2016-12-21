@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: com.orangebyte256.AppTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.078 sec <<< FAILURE!
+testApp(com.orangebyte256.AppTest)  Time elapsed: 0.074 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: Wrong not equals
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at com.orangebyte256.AppTest.test3(AppTest.java:67)
+	at com.orangebyte256.AppTest.testApp(AppTest.java:79)
+
