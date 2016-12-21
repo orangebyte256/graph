@@ -16,6 +16,7 @@ public class Edge {
         this.n2 = n2;
     }
 
+
     public void draw(Graphics g) {
         Point p1 = n1.getLocation();
         Point p2 = n2.getLocation();
