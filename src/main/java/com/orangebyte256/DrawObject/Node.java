@@ -40,6 +40,14 @@ public class Node {
          * Draw this node.
          */
 
+/**
+* Compare two nodes for equivalent"
+*
+* @param node1
+* @param node2
+* @return answer
+*/
+
     static private boolean isEquals(Node node1, Node node2)
     {
         return (node1.p.x == node2.p.x && node1.p.y == node2.p.y);
